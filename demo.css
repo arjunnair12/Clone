@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.menu {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+}
+
+.logo {
+    padding-right: 60px;
+    width: 250px;
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none; /* Removes bullets from the list */
+}
+
+.menu ul li {
+    margin-left: 20px; /* Adds space between each link */
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 15px; /* Adds padding around the text */
+    border: 2px solid transparent; /* Initially transparent border */
+    display: inline-block; /* Allows padding and border to work correctly */
+    text-align: center; /* Centers the text horizontally */
+    line-height: 1.5; /* Adjusts vertical alignment */
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; /* Smooth transition for multiple properties */
+}
+
+.menu ul li a:hover {
+    background-color: #fff;
+    border-color: #000; /* Adjust border color on hover */
+    color: #000; /* Change color on hover */
+}
+
+.franchise {
+    margin-left: 130px;
+    font-size: 14px;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 3px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.franchise:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.photo {
+    background-image: url(photo1.webp);
+    width: 100vw;
+    height: 649px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex; /* Enables flexbox layout */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    position: relative; 
+    animation: switchImage 10s ease-in-out infinite;
+}
+.see {
+    color: #fff;
+    background-color: #000000; /* Fully opaque black background */
+    border: none;
+    padding: 10px 50px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.3s, border 0.3s;
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 30px #fff; /* White glow effect */
+}
+
+.see:hover {
+    background-color: rgba(255, 255, 255); /* Slightly transparent white background on hover */
+    color: black;
+    border: 1px solid black;
+}
+
+@keyframes switchImage {
+    0%, 100% {
+        background-image: url(photo1.webp);
+    }
+    50% {
+        background-image: url(photo2.webp);
+    }
+}
+
+/* General styles for the parallax section */
+.px {
+    display: flex;
+    justify-content: center; /* Horizontally center both the text and button */
+    align-items: center;   /* Vertically align content at the bottom */
+    height: 180px; /* Adjust height as needed */
+    text-align: center; /* Center the text */
+    padding-bottom: 20px; /* Add some space from the bottom */
+    background-repeat: repeat-x; /* Repeat the background image horizontally */
+    background-size: auto 100%; /* Maintain the height and auto width for horizontal movement */
+    position: relative; /* Position the text and button relative to this container */
+}
+
+/* Styling for the section background */
+.section1 {
+    background-image: url(bg.jpg); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container to wrap the text and button */
+.px .content {
+    display: flex;
+    flex-direction: column; /* Stack the h1 and button vertically */
+    align-items: center; /* Center the text and button horizontally */
+}
+
+/* Styling for the h1 */
+.px h1 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px; /* Space between h1 and button */
+}
+
+/* Styling for the button */
+.px button {
+    padding: 10px;
+    font-size: 1rem;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(255, 128, 0);
+    color: rgb(0, 0, 0);
+    transition: 0.2s;
+}
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+/* Container for the image and text */
+.our {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide overflow to prevent scroll bars */
+}
+
+/* Fixed background image section */
+.background {
+    flex: 1; /* Takes up half of the width */
+    background-image: url('px1.jpg'); /* Add your image URL here */
+    background-size: cover; /* Cover the entire section */
+    background-attachment: fixed; /* Fixed position for parallax effect */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+}
+
+/* Text section with dark grey background */
+.text {
+    flex: 1; /* Takes up the other half of the width */
+    background-color: #333; /* Dark grey background */
+    color: white;
+    padding: 20px; /* Space inside the text section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the text horizontally */
+}
+
+.text h1 {
+    margin: 0 0 20px 0; /* Space below the heading */
+}
+
+.text p {
+    margin: 0; /* Remove default margin */
+}
+.footer {
+    background-color: #000;
+    height: 150px;
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center;
+    padding: 0 20px; /* Add padding if needed */
+}
+
+.footer .anchor {
+    display: flex;
+    flex-direction: column; /* Stack the links vertically */
+}
+
+.footer .anchor ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer .anchor ul li {
+    margin-bottom: 10px; /* Space between links */
+}
+
+.footer .anchor ul li a {
+    padding-left: 100px;
+    color: white;
+    text-decoration: none;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center text horizontally */
+    margin: 0 auto; /* Center horizontally */
+}
+
+.middle h1, .middle h2 {
+    color: #fff;
+    margin: 0; /* Remove default margin */
+}
+
+.middle h1 {
+    font-size: 30px;
+}
+
+.middle h2 {
+    font-size: 15px;
+}
+
+.last {
+    display: flex;
+    align-items: center; /* Center logo vertically */
+}
+
+.last .logo {
+    width: 80px;
+    height: 80px;
+}
+
+.footer .anchor ul li a:hover{
+    color: #989898;
+}

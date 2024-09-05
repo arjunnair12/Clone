@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colcacchio.co</title>
+    <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    <div id="menubar">
+        <div class="menu">
+            <img src="icon.webp" alt="icon" class="logo">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Menu">Menu</a></li>
+                <li><a href="#Restaurants">Restaurants</a></li>
+                <li><a href="#Promos">Promos</a></li>
+                <li><a href="#Order in">Order in</a></li>
+                <li><a href="#Vouchers">Vouchers</a></li>
+                <li><a href="#Contact">Contact us</a></li>
+            </ul>
+            <button class="franchise">Franchise opportunity</button>
+        </div>
+    </div>
+    <div class="photo">
+        <button class="see">See our menu</button>
+    </div>
+    <div class="px section1">
+        <div class="content">
+            <h1>Find Your Nearest Restaurant</h1>
+            <button>Restaurants</button>
+        </div>
+    </div>
+    <div class="our">
+        <div class="background">
+            <!-- Fixed image here -->
+            
+        </div>
+        <div class="text">
+            <h1>Our Story</h1>
+            <p>Welcome to Col’Cacchio where our three-decade-long <br>story unfolded in the ultimate rom-com meets foodie <br>adventure.<br><br>
+            Love at first bite, saw two hearts united by a passion for <br>crafting more than just a meal, but a celebration of love <br>and irresistible food. Our menu is inspired by the flavours <br>of Italy and blended with South African charm, all lovingly <br>curated to bring our famiglia together.<br><br>
+            Buon appetito!<br>
+            Kinga & Michael</p>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="anchor">
+            <ul>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms</a></li>
+            </ul>
+        </div>
+        <div class="middle">
+            <h1>The Reason You Crave Pizza</h1>
+            <h2>© 2024 Col'Cacchio Pty Ltd</h2>
+        </div>
+        <div class="last">
+            <img src="logo.webp" alt="Logo" class="logo">
+        </div>
+    </div>
+    
+    
+    <!-- JavaScript for parallax effect -->
+    <script>
+        document.addEventListener('scroll', function() {
+            const scrolled = window.scrollY;
+            document.querySelector('.px').style.backgroundPosition = `${-scrolled}px 0`;
+        });
+        </script>
+</body>
+</html>
